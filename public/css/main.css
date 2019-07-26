@@ -1,0 +1,376 @@
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    
+}
+body{
+    background-color: #efefef;
+    position: relative;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.5;
+    font-family:"Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+/* 导航栏 */
+header{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 60px;
+    color: #555;
+    background-color: rgba(255, 255, 255, .9);
+    border-bottom:1px solid #ddd;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+#nav{
+    width: 1000px;
+    height: 60px;
+    margin: 0 auto;
+}
+#nav>p{
+    width: 154px;
+    height: 60px;
+    font-size: 22px;
+    line-height: 60px;
+    float: left;
+}
+#nav> .ul-left{
+    width: 248px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 60px;
+    float: left;
+    
+}
+#nav>.ul-left>li{
+    
+    font-size: 16px;
+   
+}
+
+#nav>.ul-left>li>a,
+#nav>.ul-right>a,
+.logout>a{
+    text-decoration: none;
+    color: #555;
+}
+#nav> .ul-right{
+    width: 80px;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    line-height: 60px;
+    font-size: 16px;
+}
+/* 退出登录 */
+.logout{
+    position: absolute;
+    top: 18px;
+    right: 260px;
+    font-size: 16px;
+
+}
+.hide{
+    display: none;
+}
+
+
+.nav_box{
+    transition: all 0.35s;
+    top:-60px;
+}
+.nav_show{
+    transition: all 0.35s;
+    top: 0;
+}
+
+/* 导航栏下方首页内容区 */
+#homePage{
+    width: 1000px;
+    margin: 80px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* display: none; */
+}
+
+aside{
+    width: 30%;
+    display: block;
+}
+/* 关于 */
+.guanyu{
+    width: 300px;
+    height: 184px;
+    background-color: #F7F7F7;
+}
+.guanyu-top{
+  width: 100%;
+  height: 30px;
+  background-color: #fff;
+  line-height: 30px;
+}
+.guanyu-top p,
+.photo-top p{
+    font-size: 15px;
+    font-weight: 600;
+    color: #333333;
+    margin-left: 10px;
+
+}
+.guanyu-bot,
+.photo-bot{
+    width: 300px;
+    height: 164px;
+}
+.guanyu-bot img{
+    width: 120px;
+    height: 120px;
+    margin-top: 12px;
+    margin-left: 15px;
+    float: left;
+}
+.ps{
+    float: right;
+    width: 161px;
+    height: 119px;
+    margin-top: 13px;
+    line-height: 24px;
+}
+/* 照片 */
+.photo{
+    width: 300px;
+    height: 184px;
+    margin-top: 20px;
+    background-color: #F7F7F7;
+}
+.photo-top{
+  width: 100%;
+  height: 30px;
+  background-color: #fff;
+  line-height: 30px;
+}
+.photo-bot li {
+    width: 32%;
+    overflow: hidden;
+    float: left;
+    height: 80px;
+    margin-bottom: 2px;
+    margin-left: 4px;
+}
+.photo-bot li img {
+    width: 89.6px;
+    height: 80px;
+    transition: all 0.5s;
+}
+
+/* 输入搜索框 */
+#inp{
+    width: 100%;
+    border: 1px solid #000;
+    margin-top: 20px;
+    border-radius: 0 5px 5px 0;
+    position: relative;
+    background-color: #000;
+}
+#one{
+    height: 36px;
+    width: 72%;
+    padding-left: 10px;
+    color: rgba(153, 153, 153);
+}
+#two{
+    height: 36px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    position: absolute;
+    right: 9%;
+}
+
+#classify{
+    width: 100%;
+    background-color: rgba(255,255,255,0.5);
+    margin-top: 20px;
+}
+#classify>h2{
+    height: 30px;
+    color: #333;
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 20px;
+    background-color: #fff;
+}
+
+#classify>ul{
+    padding: 10px;
+    list-style: none;
+}
+#classify>ul>li{
+    margin: 0 0 10px 10px ;
+}
+#classify>ul>li>a{
+    text-decoration: none;
+    color: #555;
+}
+
+/* 点击排行 */
+/* 花花 */
+.flower{
+    margin-bottom: 5px;
+    background: url(../images/li.png) left center no-repeat;
+    padding-left: 20px;
+
+}
+#sorts{
+    width: 100%;
+    background-color: rgba(255,255,255,0.5);
+    margin-top: 20px;
+}
+#sorts>h2{
+    height: 30px;
+    color: #333;
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 20px;
+    background-color: #fff;
+}
+#sorts>ul{
+    padding: 10px;
+    list-style: none;
+}
+#sorts>ul>li{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#sorts>ul>li>a{
+    text-decoration: none;
+    color: #555;
+}
+#sorts>ul>li>a:hover{
+    color: #000;
+}
+
+/* 关注我 */
+#attention{
+    width: 100%;
+    background-color: rgba(255,255,255,0.5);
+    margin-top: 20px; 
+}
+#attention>h2{
+    height: 30px;
+    color: #333;
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 20px;
+    background-color: #fff;
+}
+#attention>ul{
+    padding: 10px;
+    list-style: none;
+}
+#attention>ul img{
+    width: 280px;
+    height: 280px;
+}
+
+/* 右侧文章显示 */
+.right{
+    width: 68%;
+    background-color: rgba(255,255,255,0.8);
+}
+
+/* 简介 */
+#intro{
+    width: 100%;
+    background-color: rgba(255,255,255,0.5);
+}
+#intro>h2{
+    height: 30px;
+    color: #333;
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 20px;
+    background-color: #fff;
+}
+#intro>ul{
+    padding: 10px;
+    list-style: none;
+}
+#intro>ul>i>img{
+   width: 120px;
+   height: 120px;
+   float: left;
+   margin-right: 10px;
+}
+#intro>ul>p{
+    font-size: 14px;
+    line-height: 24px;
+}
+
+/* 相册 */
+#photo{
+    width: 100%;
+    background-color: rgba(255,255,255,0.5);
+    margin-top: 20px;
+}
+#photo>h2{
+    height: 30px;
+    color: #333;
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 20px;
+    background-color: #fff;
+}
+#photo>ul{
+    list-style: none;
+    padding: 10px 10px 8px 10px;
+}
+#photo>ul>li{
+    width: 87.6px;
+    height: 80px;
+    margin: 0 2px 2px 0;
+    display: inline-block;
+    overflow: hidden;
+}
+#photo>ul>li>a>img{
+    width: 87.6px;
+    height: 80px; 
+}
+#photo>ul>li>a>img:hover{
+    transform: scale(1.05);
+    transition: all 1s;
+    /* animation: photos 1s */
+}
+
+/* 友情链接 */
+#hint{
+    width: 100%;
+    background-color: rgba(255,255,255,0.5);
+    margin-top: 20px;
+}
+#hint>h2{
+    height: 30px;
+    color: #333;
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 20px;
+    background-color: #fff;
+}
+#hint>ul{
+    padding: 10px;
+    list-style: none;
+}
+#hint>ul>li>a{
+    text-decoration: none;
+    color: #555;
+    margin: 0 10px 5px 0;
+}
+#hint>ul>li>a:hover{
+    color: #000
+}

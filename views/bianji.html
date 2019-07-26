@@ -1,0 +1,103 @@
+{{include './header'}}
+
+<article id="homePage">
+    <!-- 左侧导航模块 -->
+    <aside>
+        <!-- 简介 照片 首页显示 -->
+        <div class="guanyu">
+          <div class="guanyu-top"><p>关于</p></div>
+          <div class="guanyu-bot">
+              <img src="/imgs/8.jpg" alt="">
+               <div class="ps">
+                   <p style="font-weight: 600;">TaoYinG</p>
+                   19年入行，一直潜心研究web前端技术，一边工作一边分享一些个人博客模板。
+               </div>
+      
+          </div>
+
+        </div>
+
+        <div class="photo">
+            <div class="photo-top"><p>相册</p></div>
+            <div class="photo-bot">
+                <ul>
+                    <li><a href="/"><img src="/imgs/7.jpg"></a></li>
+                    <li><a href="/"><img src="/imgs/11.jpg"></a></li>
+                    <li><a href="/"><img src="/imgs/9.jpg"></a></li>
+                    <li><a href="/"><img src="/imgs/10.jpg"></a></li>
+                    <li><a href="/"><img src="/imgs/15.jpg"></a></li>
+                    <li><a href="/"><img src="/imgs/12.jpg"></a></li>
+                  </ul>
+          
+        
+            </div>
+  
+          </div>
+        
+
+        <!-- 搜索 -->
+        <div id="inp">
+            <form action="/search" method="GET" >
+                <input type="text" name="search" id="one" placeholder="请输入关键字词">
+                <input type="submit" id="two" value="搜索">
+            </form>
+        </div>
+        <!-- 分类 -->
+        <div id="classify">
+            <h2>分类</h2>
+            <ul>
+                <li><a>文章<span class="count"></span></a></li>
+                <li><a href="#">相册(6)</a></li>
+            </ul>
+        </div>
+
+    
+       
+
+        <!-- 点击排行 -->
+        <div id="sorts" class="cliclSort">
+            <h2>点击排行</h2>
+            <ul id="container"></ul>
+            <script type="text/html" id="temp"></script>
+                {{each clickSort d}}
+                    <li class="flower" >
+                        <a id="sortsShow" data-id="{{d.id}}">{{d.title}}
+                        </a>
+                    </li>
+                {{/each}}
+            </script>
+        </div>
+
+      
+
+        <!-- 关注我 -->
+        <div id="attention">
+            <h2>关注我</h2>
+            <ul><img src="/imgs/16.jpg" alt=""></ul>
+        </div>
+    </aside>
+
+    <main id="topShow" class="right">
+      <form action="/bianji/{{data._id}}" method="POST" >
+        <input type="text" name="" value="" hidden>
+         <span>标题：</span><input type="text" name="title" value="{{data.title}}" disabled><br><br>
+         <span>标签：</span><input type="text" name="label" value="{{data.label[0]}} "disabled>
+           <input type="text" name="label" value="{{data.label[1]}}" disabled>
+           <input type="text" name="label" value="{{data.label[2]}}" disabled><br><br>
+         <span>内容：</span><br>
+         <textarea name="content" cols="120" rows="10" required class="texts">{{data.content}}</textarea><br>
+         <button type="submit">发布</button>
+         <p style="margin-top: 10px;margin-left: 68px;"></p>
+      </form>
+      
+
+
+    </main>
+
+</article>
+
+
+
+
+
+{{include './footer'}}

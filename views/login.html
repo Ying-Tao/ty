@@ -1,0 +1,21 @@
+{{include './header'}}
+
+<div class="login">
+    <div class="login-left">
+       登录
+    </div>
+    <div class="login-right">
+        <form action="" method="POST">
+        <input type="text"  placeholder="用户名" name="username" required/><br /><!--br 换行-->
+        <input type="password"  placeholder="密码" name="password" required/><br />
+        <input type="submit"  id="input2" value="登录" onclick="location.href='/'"/><br />
+        <a class="p1" href="#">忘记密码？</p>
+        <p style="margin-left: 0px;margin-top: 30px;">{{error}}</p>
+      </form>
+    </div>
+
+</div>
+
+
+
+{{include './footer'}}

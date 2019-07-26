@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <!-- 导航栏 -->
+  <header class="nav_top">
+    <div id="nav">
+        <p>个人博客</p>
+        <ul class="ul-left">
+            <li>
+                <a href="/">首页</a>
+            </li>
+            <li>
+                <a href="/article">存档</a>
+            </li>
+            <li><a href="/biaoqian">标签</a></li>
+            <li><a href="/blogs">发布</a></li>
+            <li><a href="/me">关于我</a> </li>
+  
+        </ul>
+
+
+        {{if user}}
+        <div class="logout">
+                <div></div>
+                <span class="user" style="color: #1AB392;">{{user.username}}</span>
+                <a href="/logout">退出登录</a>
+            </div>
+         {{else}}  
+            <div class="ul-right">
+                <a href="/login">登录</a>
+                <a href="/regist">注册</a>
+            </div>
+        {{/if}}
+    </div>
+</header>
